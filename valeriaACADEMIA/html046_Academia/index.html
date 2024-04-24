@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACADEMIA</title>
+    <link rel="stylesheet" href="assets/estilos/estilo.css">
+    <link rel="stylesheet" href="assets/fontawesome-free-5.15.4-web/css/all.css">
+    <link rel="stylesheet" href="assets/estilos/modal.css">
+    <script src="assets/scripts/script.js"></script>
+    <script src="assets/fontawesome-free-5.15.4-web/js/all.js"></script>
+</head>
+<body onload="fInicio()">
+    <div id="div_modal">
+        <!-- `cur_id`, `cur_nombre` -->
+        <div id="div_form_cursos">
+            <input type="hidden" id="cur_id">
+            <label for="cur_nombre">Nombre</label>
+            <input type="text" id="cur_nombre">
+            <p id="cur_error" class="linea_error">ERROR</p>
+            <div class="botonera">
+                <div onclick="fOCultarModal()">Cancelar</div>
+                <div id="boton_curso_grabar"      onclick="fCursosCRUD('a')">Grabar</div>
+                <div id="boton_curso_eliminar"    onclick="fCursosCRUD('e')">Eliminar</div>
+                <div id="boton_curso_modificar"   onclick= "fCursosCRUD('m')">Modificar</div>
+            </div>
+        </div>
+        <!-- `as_id`, `as_nombre`, `as_cur_id` -->
+        <div id="div_form_asignaturas">
+            <input type="hidden" id="as_id">
+            <label for="as_nombre">Nombre</label>
+            <input type="text" id="as_nombre">
+            
+            <label for="as_cur_id">CURSO</label>
+            <!-- Aquí crearé el combo -->
+            <div id="as_curso"></div>
+            <p id="as_error" class="linea_error">ERROR</p>
+            <div class="botonera">
+                <div onclick="fOCultarModal()">Cancelar</div>
+                <div id="boton_Asignaturas_grabar"      onclick="fAsignaturasCRUD('a')">Grabar</div>
+                <div id="boton_Asignaturas_eliminar"    onclick="fAsignaturasCRUD('e')">Eliminar</div>
+                <div id="boton_Asignaturas_modificar"   onclick="fAsignaturasCRUD('m')">Modificar</div>
+            </div>
+        </div>
+        <!-- `al_id`, `al_nombre`, `al_apellidos`, `al_cur_id` -->
+        <div id="div_form_alumnos">
+            <input type="hidden" id="al_id">
+            <label for="al_nombre">Nombre</label>
+            <input type="text" id="al_nombre">
+            <label for="al_apellido">Apellido</label>
+            <input type="text" id="al_apellido">
+            
+            <label for="al_cur_id">Curso</label>
+            <!-- Aquí crearé el combo -->
+            <div id="al_curso"></div>
+            <p id="al_error" class="linea_error">ERROR</p>
+            <div class="botonera">
+                <div onclick="fOCultarModal()">Cancelar</div>
+                <div id="boton_Alumno_grabar"       onclick="fAlumnoCRUD('a')">Grabar</div>
+                <div id="boton_Alumno_eliminar"     onclick="fAlumnoCRUD('e')">Eliminar</div>
+                <div id="boton_Alumno_modificar"    onclick="fAlumnoCRUD('m')">Modificar</div>
+            </div>
+        </div>
+    </div>
+
+    <header></header>
+    <nav>
+        <div onclick="fMostrarCursos()">CURSOS</div>
+        <div onclick="fMostrarAlumnos()">ALUMNOS</div>
+        <div onclick="fMostrarAsignaturas()">ASIGNATURAS</div>
+    </nav>
+    <section>
+        <select name="" id="prueba">
+            <option value="1">A</option>
+            <option value="2">B</option>
+            <option value="3">C</option>
+            <option value="4">D</option>
+        </select>
+    </section>
+    <footer></footer>
+</body>
+</html>

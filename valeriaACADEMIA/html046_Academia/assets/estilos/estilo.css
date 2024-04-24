@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-areas: 
+        "zh zh" "zn zs" "zf zf";
+}
+header{
+    grid-area: zh;
+    background-color: black;
+    color: white;
+}
+nav{
+    grid-area: zn;
+    background-color: #444;
+    color: white;
+}
+section{
+    grid-area: zs;
+    background-color: #ddd;
+    color: black;
+}
+footer{
+    grid-area: zf;
+    background-color: black;
+    color: white;
+}
